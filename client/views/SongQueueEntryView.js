@@ -5,23 +5,8 @@ var SongQueueEntryView = Backbone.View.extend({
 
   template: _.template('<td>(<%= artist %>)</td><td><%= title %></td>'),
 
-  // events: {
-  //   'enqueue': function() {
-  //     debugger;
-  //     console.log(songQueue.at(0));
-  //     if (songQueue.at(0) === this) {
-  //       this.model.play();
-  //     }
-  //   }
-  // },
-
   initialize : function() {
     this.render();
-    // console.log("HIII", this);
-    // debugger;
-    // if (songQueue.at(0) === this) {
-    //   this.model.play();
-    // }
   },
 
   render: function(){

@@ -13,6 +13,8 @@ var SongModel = Backbone.Model.extend({
 
   dequeue: function(){
     //dequeue gets the first model in the collection and detaches it
+    console.log("you have dequeued this song");
+    this.trigger('dequeue', this);
   }
 
 });
