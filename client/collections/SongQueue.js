@@ -3,13 +3,16 @@ var SongQueue = Songs.extend({
 
   model: SongModel,
 
-  initialize: function(){
-    this.on('add', this.updateQueuePlay, this);
-    this.on('remove', this.playFirst, this);
+  removeSong : function(song) {
+    var currSong = this.at(0);
+    this.remove(song);
+    if (song === currSong) {
+      this.playFirst();
+    }
   },
 
-  updateQueuePlay : function() {
-    console.log('we have updated queue play');
+  addSong : function(song) {
+    this.add(song);
     if (this.length === 1) {
       this.playFirst();
     }

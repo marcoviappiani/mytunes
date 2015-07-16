@@ -1,8 +1,6 @@
 // SongQueueView.js - Defines a backbone view class for the song queue.
 var SongQueueView = Backbone.View.extend({
 
-  // model: songQueue,
-
   tagName: "table",
 
   initialize: function() {
@@ -26,9 +24,5 @@ var SongQueueView = Backbone.View.extend({
       );
     }
   }
-
-  // events: {
-  //   'enqueue': 'render'
-  // }
 
 });
