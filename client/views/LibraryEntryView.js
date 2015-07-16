@@ -7,7 +7,12 @@ var LibraryEntryView = Backbone.View.extend({
 
   events: {
     'click': function() {
-      this.model.play();
+      // check if anything is currently playing
+        // if not, play this song
+      // else, enqueue
+      // access to queue??
+      this.model.enqueue();
+      console.log('clicked song: done enqueue', this);
     }
   },
 
